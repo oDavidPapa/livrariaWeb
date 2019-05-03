@@ -20,6 +20,7 @@
             $sql->bindValue(':pDataNascimento', $this->converterDataMysql($pAutor->getDataNascimento()));
 
             $sql->execute();
+            
 
         }
 
