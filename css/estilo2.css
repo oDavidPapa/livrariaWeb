@@ -1,0 +1,9 @@
+.borda{
+    width: 360px;
+    padding: 3% 3% 3%;
+    margin: auto;
+    border :solid;
+    border-color: #748fe7;
+    position: relative;
+    background-color: #d3b9e9;   
+}
