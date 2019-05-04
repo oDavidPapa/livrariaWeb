@@ -53,7 +53,7 @@ class LivroDAO {
     }
 
     public function atualizarLivro(Livro $livro) {
-        $sql->con->prepare("UPDATE livros SET isbn = :isbn,"
+        $sql = $this->con->prepare("UPDATE livros SET isbn = :isbn,"
                 . "titulo = :titulo,"
                 . "edicao_num = :edicao,"
                 . "ano_publicacao = :anoPublicacao,"

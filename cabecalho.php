@@ -29,7 +29,7 @@
       </li>
       <li><a href="#">Publicações</a>
               <ul>
-                      <li><a href="#">Relação de publicações</a></li>
+                  <li><a href="controles/controlerLivro.php?opcao=2">Relação de publicações</a></li>
                       <li><a href="formLivro.php">Cadastrar</a></li>
                       <li><a href="#">Controlar Estoque</a></li>
               </ul>
@@ -39,5 +39,3 @@
 </ul>
 </nav>
 </div>
-</body>
-</html>
