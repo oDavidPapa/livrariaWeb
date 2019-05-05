@@ -13,7 +13,6 @@ $autores = $_SESSION['autores'];
 //var_dump($autores);
 include_once 'cabecalho.php';
 ?>
-
 <center>
     <table width = "70%">
         <tr align ="left">

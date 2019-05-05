@@ -44,3 +44,11 @@ div.barra
     width: auto;
     background-color: #C00000;
 }
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}

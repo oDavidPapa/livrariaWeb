@@ -12,6 +12,10 @@ class ClienteDAO {
         $this->con = $conexao->getConexao();
     }
 
+    function converterDataMysql($data) {
+        return date('Y-m-d', $data);
+    }
+
     public function incluirCliente(Cliente $cliente) {
         $sql = $this->con->prepare("INSERT INTO clientes "
                 . "(cpf, nome, logradouro, cidade, estado, cep, data_nascimento, email, senha, rg) "
@@ -24,16 +28,12 @@ class ClienteDAO {
         $sql->bindValue(':cidade', $cliente->getCidade());
         $sql->bindValue(':estado', $cliente->getEstado());
         $sql->bindValue(':cep', $cliente->getCep());
-        $sql->bindValue(':data_nascimento', converterDataMysql($cliente->getDataNascimento()));
+        $sql->bindValue(':data_nascimento', $this->converterDataMysql($cliente->getDataNascimento()));
         $sql->bindValue(':email', $cliente->getEmail());
         $sql->bindValue(':senha', $cliente->getSenha());
         $sql->bindValue(':rg', $cliente->getRg());
 
         $sql->execute();
-    }
-
-    function converterDataMysql($data) {
-        return date('Y-m-d', $data);
     }
 
     public function getClientes() {
@@ -58,6 +58,7 @@ class ClienteDAO {
         $sql->bindValue(':cpf', $cpf);
 
         $sql->execute();
+        return $sql->fetch(PDO::FETCH_OBJ);
     }
 
     public function atualizarCliente(Cliente $cliente) {

@@ -1,7 +1,7 @@
 
 <?php include_once 'cabecalho.php'; ?>
 <div class="form">
-    <center> <strong>Informe os dados do Livro:</strong>
+    <center> <strong>Informe os dados do Cliente:</strong>
         <br>
         <br>
         <form action = "controles/controlerCliente.php">
