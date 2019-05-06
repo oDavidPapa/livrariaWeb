@@ -63,16 +63,16 @@ class ClienteDAO {
 
     public function atualizarCliente(Cliente $cliente) {
 
-        $sql = $this->con->prepare("UPDATE clientes SET"
-                . "cpf = :cpf,"
-                . "nome = :nome,"
-                . "logradouro = :logradouro,"
-                . "cidade = :cidade,"
-                . "estado = :estado,"
-                . "cep = :cep,"
-                . "data_nascimento = :data_nascimento,"
-                . "email = :email,"
-                . "senha = :senha,"
+        $sql = $this->con->prepare("UPDATE clientes SET "
+                . "cpf = :cpf, "
+                . "nome = :nome, "
+                . "logradouro = :logradouro, "
+                . "cidade = :cidade, "
+                . "estado = :estado, "
+                . "cep = :cep, "
+                . "data_nascimento = :data_nascimento, "
+                . "email = :email, "
+                . "senha = :senha, "
                 . "rg = :rg");
 
         $sql->bindValue(':cpf', $cliente->getCpf());
@@ -81,11 +81,11 @@ class ClienteDAO {
         $sql->bindValue(':cidade', $cliente->getCidade());
         $sql->bindValue(':estado', $cliente->getEstado());
         $sql->bindValue(':cep', $cliente->getCep());
-        $sql->bindValue(':data_nascimento', converterDataMysql($cliente->getDataNascimento()));
+        $sql->bindValue(':data_nascimento', $this->converterDataMysql($cliente->getDataNascimento()));
         $sql->bindValue(':email', $cliente->getEmail());
         $sql->bindValue(':senha', $cliente->getSenha());
         $sql->bindValue(':rg', $cliente->getRg());
-
+       // var_dump($sql);
         $sql->execute();
     }
 
