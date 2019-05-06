@@ -5,6 +5,7 @@ require_once '../dao/LivroDAO.php';
 require_once '../dao/Conexao.php';
 
 $opcao = (int) $_REQUEST['opcao'];
+//echo $opcao;
 
 if ($opcao == 1) {
 
@@ -58,8 +59,7 @@ if ($opcao == 1) {
     $descricao = $_REQUEST['descricao'];
 
     $livro = new Livro($isbn, $titulo, $edicao, $anoPublicacao, $descricao);
-    $livro->setIsbn($isbn); // PRECISA DISSO PARA O MÉTODO ATUALIZAR LIVRO SABER QUAL o $ISBN A SER TROCADO!  
-
+    //$livro->setIsbn($isbn); // PRECISA DISSO PARA O MÉTODO ATUALIZAR LIVRO SABER QUAL o $ISBN A SER TROCADO!  
     $livroDAO = new LivroDAO();
     $livroDAO->atualizarLivro($livro);
 

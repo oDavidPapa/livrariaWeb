@@ -2,10 +2,10 @@ div.form{
     width: 360px;
     padding: 3% 3% 3%;
     margin: auto;
-    border :solid;
-    border-color: #748fe7;
+    border :aliceblue;
+    border-color: #ff9999;
     position: relative;
-    background-color: #d3b9e9;   
+    background-color: #ccccff;   
 }
 
 * {

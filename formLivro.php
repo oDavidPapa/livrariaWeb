@@ -1,9 +1,10 @@
 
 <?php include_once 'cabecalho.php'; ?>
+<br>
+<br>
 <div class="form">
     <center> <strong>Informe os dados do Livro:</strong>
-        <br>
-        <br>
+
         <form action = "controles/controlerLivro.php">
             ISBN: <input type="text" name = "isbn" size = "36"/><br><br>
             Título: <input type="text"  name = "titulo" size = "36"/><br><br>
@@ -14,7 +15,8 @@
             <center> <button>Cadastrar</button></center>
         </form>
 </div>
-
+<br>
+<br>
 
 </body>
 </html>

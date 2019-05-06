@@ -1,6 +1,9 @@
 
 <?php include_once 'cabecalho.php'; ?>
+<br>
+<br>
 <div class="form">
+
     <center> <strong>Informe os dados do Cliente:</strong>
         <br>
         <br>
@@ -20,6 +23,8 @@
             <center> <button>Cadastrar</button></center>
         </form>
 </div>
+<br>
+<br>
 
 
 </body>

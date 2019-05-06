@@ -21,8 +21,10 @@ $dataNascimento = formatarData(strtotime($cliente->data_nascimento));
 $senha = $cliente->senha;
 $cep = $cliente->cep;
 ?>
+<br>
+<br>
 <div class="form">
-    <center> <strong>Informe os dados do Cliente:</strong>
+    <center> <strong>Atualizar Cliente:</strong>
         <br>
         <br>
         <form action = "controles/controlerCliente.php">
@@ -40,6 +42,8 @@ $cep = $cliente->cep;
             <center> <button>Atualizar</button></center>
         </form>
 </div>
+<br>
+<br>    
 
 
 </body>

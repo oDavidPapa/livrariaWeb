@@ -15,7 +15,7 @@ $id = $autor->autor_id;
 include_once './cabecalho.php';
 ?>
 <div class="borda">
-    <center> <strong>Informe os dados do Autor:</strong>
+    <center> <strong>Atualizar Autor:</strong>
         <br>
         <br>
         <form action = "controles/controlerAutor.php">
