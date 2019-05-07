@@ -20,7 +20,7 @@
             Senha: <input type="password"  name = "senha" size = "34"/><br><br>
 
             <input type="hidden" name ="opcao" value="1">          
-            <center> <button>Cadastrar</button></center>
+             <input type="submit" value=" Cadastrar ">
         </form>
 </div>
 <br>

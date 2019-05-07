@@ -1,9 +1,6 @@
 
 <?php include_once './cabecalho.php'; ?>
 
-
-
-
 <center>
     <br>
     <br>

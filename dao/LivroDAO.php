@@ -53,25 +53,20 @@ class LivroDAO {
     }
 
     public function atualizarLivro(Livro $livro) {
-       // var_dump($livro);
         $sql = $this->con->prepare("UPDATE livros SET "
                 . "isbn = :isbn, "
                 . "titulo = :titulo, "
                 . "edicao_num = :edicao, "
                 . "ano_publicacao = :anoPublicacao, "
-                . "descricao = :descricao");
-
+                . "descricao = :descricao "
+                . "WHERE isbn = :isbn");
+        
+        
         $sql->bindValue(':isbn', $livro->getIsbn());
-        //echo $livro->getIsbn(). "<br>";
         $sql->bindValue(':titulo', $livro->getTitulo());
-        //echo $livro->getTitulo(). "<br>";
         $sql->bindValue(':edicao', $livro->getEdicao());
-       // echo $livro->getEdicao(). "<br>";
         $sql->bindValue(':anoPublicacao', $livro->getAnoPublicacao());
-       // echo $livro->getAnoPublicacao(). "<br>";
         $sql->bindValue(':descricao', $livro->getDescricao());
-       // echo $livro->getDescricao(). "<br>";
-       // var_dump($sql);
         $sql->execute();
     }
 

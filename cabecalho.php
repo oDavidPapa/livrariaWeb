@@ -35,8 +35,8 @@
                             <li><a href="#">Controlar Estoque</a></li>
                         </ul>
                     </li>
-                    <li><a href="contato.php">Contato</a></li>
-                    <li><a href="formLogin.php">Login</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Login</a></li>
                 </ul>
             </nav>
         </div>

@@ -39,7 +39,7 @@ $cep = $cliente->cep;
             E-mail: <input type="text"  name = "email" value="<?php echo $email ?>" size = "34"/><br><br>
             Senha: <input type="password"  name = "senha" value="<?php echo $senha ?>" size = "34"/><br><br>
             <input type="hidden" name ="opcao" value="5">          
-            <center> <button>Atualizar</button></center>
+             <input type="submit" value=" Atualizar ">
         </form>
 </div>
 <br>

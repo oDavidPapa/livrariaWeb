@@ -28,7 +28,7 @@ $descricao = $livro->descricao;
             Descrição: <input type="text"  name = "descricao" value="<?php echo $descricao ?>" size = "32"/><br><br>
             Alterar: <input type="radio" name="opcao" value="5"> | Excluir: <input type="radio" name="opcao" value="4"<br><br>
            <br>
-            <center> <button>Executar</button></center>
+             <input type="submit" value=" Executar ">
         </form>
 
 </div>

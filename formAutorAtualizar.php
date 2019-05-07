@@ -24,7 +24,7 @@ include_once './cabecalho.php';
             Data de Nascimento: <input type="text"  name = "dataNascimento" value="<?php echo $dataNascimento ?>" size = "15"/><br><br>
             <input type="hidden" name ="opcao" value="5">     
             <input type="hidden" name ="id" value="<?php echo $id ?>">      
-            <center> <button>Cadastrar</button></center>
+             <input type="submit" value=" Cadastrar ">
         </form>
 </div>
 

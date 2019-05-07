@@ -11,7 +11,7 @@
             E-mail: <input type="text"  name = "email" size = "27"/><br><br>
             Data de Nascimento: <input type="text"  name = "dataNascimento" size = "15"/><br><br>
             <input type="hidden" name ="opcao" value="1">          
-            <center> <button>Cadastrar</button></center>
+             <input type="submit" value=" Cadastrar ">
         </form>
 </div>
 <br>
