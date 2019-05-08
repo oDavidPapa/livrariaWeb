@@ -14,6 +14,9 @@
             Descrição: <input type="text"  name = "descricao" size = "32"/><br><br>
             <input type="hidden" name ="opcao" value="1">          
             <input type="submit" value=" Cadastrar ">
+<!--            <select>
+                <option value="<?php// $editora->getId() ?>"> <?php //echo $editora->getNome() ?> </option> 
+            </select>-->
         </form>
 </div>
 <br>
