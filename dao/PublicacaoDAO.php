@@ -7,7 +7,7 @@ class PublicacaoDAO {
 
     private $con;
 
-    public function PublicacaDAO() {
+    public function PublicacaoDAO() {
 
         $conexao = new Conexao();
         $this->con = $conexao->getConexao();
@@ -45,21 +45,27 @@ class PublicacaoDAO {
     }
 
     public function getPublicacoes() {
-        $rs = $this->con->query("SELECT * FROM publicacao");
-
+       // echo "entrou";
+        $rs = $this->con->prepare("SELECT * FROM publicacao");
+        $rs->execute();
+        
+      //  echo "depois";
         $publicacoes = array();
         while ($row = $rs->fetch(PDO::FETCH_OBJ)) {
+            //var_dump($row);
 
             $publicacao = new Publicacao();
             $publicacao->setIdPublicacao($row->publicacao_id);
             $publicacao->setIsbn($row->isbn);
             $publicacao->setTitulo($this->getTitulo($row->isbn));
             $publicacao->setAutor($this->getAutor($row->autor_id));
-            $publicacao->setEditora($this->getEditora($row->ediotra_id));
+            $publicacao->setEditora($this->getEditora($row->editora_id));
             $publicacao->setPreco($row->preco);
             $publicacoes[] = $publicacao;
         }
-
+        
+        
+       // var_dump($publicacoes);
         return $publicacoes;
     }
 
@@ -77,7 +83,7 @@ class PublicacaoDAO {
         $publicacao->setIsbn($row->isbn);
         $publicacao->setTitulo($this->getTitulo($row->isbn));
         $publicacao->setAutor($this->getAutor($row->autor_id));
-        $publicacao->setEditora($this->getEditora($row->ediotra_id));
+        $publicacao->setEditora($this->getEditora($row->editora_id));
         $publicacao->setPreco($row->preco);
 
         return $publicacao;

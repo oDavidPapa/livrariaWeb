@@ -1,6 +1,6 @@
 <?php
 
-// header('Content-Type: text/html; charset=ISO-8859-1');
+//header('Content-Type: text/html; charset=ISO-8859-1');
 
 function formatarData($data) {
     return date('d/m/Y', $data);

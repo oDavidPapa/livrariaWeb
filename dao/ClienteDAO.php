@@ -73,7 +73,8 @@ class ClienteDAO {
                 . "data_nascimento = :data_nascimento, "
                 . "email = :email, "
                 . "senha = :senha, "
-                . "rg = :rg");
+                . "rg = :rg "
+                . "WHERE cpf = :cpf");
 
         $sql->bindValue(':cpf', $cliente->getCpf());
         $sql->bindValue(':nome', $cliente->getNome());

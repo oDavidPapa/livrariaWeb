@@ -1,7 +1,7 @@
 <HTML>
     <HEAD>
         <TITLE>Pagina Inicial</TITLE>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="stylesheet" type="text/css" href="css/estilo.css">
 
     </HEAD>
@@ -29,7 +29,7 @@
                     </li>
                     <li><a href="#">Publicações</a>
                         <ul>
-                            <li><a href="controles/controlerLivro.php?opcao=2">Relação de publicações</a></li>
+                            <li><a href="controles/controlerPublicacao.php?opcao=2">Relação de publicações</a></li>
                             <li><a href="pesquisaLivro.php">Pesquisar Publicação</a></li>
                             <li><a href="formLivro.php">Cadastrar</a></li>
                             <li><a href="#">Controlar Estoque</a></li>

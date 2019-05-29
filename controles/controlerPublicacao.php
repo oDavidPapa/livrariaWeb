@@ -3,16 +3,17 @@
 include_once '../dao/Conexao.php';
 include_once '../dao/PublicacaoDAO.php';
 
-$opcao = $_REQUEST['opcao'];
+$opcao = (int) $_REQUEST['opcao'];
 
 
 if ($opcao == 2) {
     $publicacaoDAO = new PublicacaoDAO();
-
-    $lista = $publicacaoDAO->getPublicacoes();
+    //echo "TESTE";
+    $publicacoes = $publicacaoDAO->getPublicacoes();
 
     session_start();
-    $_SESSION['publicacoes'] = $lista;
+    $_SESSION['publicacoes'] = $publicacoes;
     header("Location:../exibirPublicacoes.php");
 
 }
+?>
