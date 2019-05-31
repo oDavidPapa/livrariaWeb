@@ -6,6 +6,8 @@ session_start();
 
 $publicacoes = $_SESSION['publicacoes'];
 
+echo "<div align='right'> <a href='controles/controlerCarrinho.php?opcao=3'><img src='imagens/meu-carrinho.png'></a></div>";
+
 
 foreach ($publicacoes as $publicacao) {
     ?>  

@@ -33,6 +33,7 @@ if ($opcao == 2) {
     $carrinho = $_SESSION['carrinho'];
 
     unset($carrinho[$indice]);
+    sort($carrinho);
 
     $_SESSION['carrinho'] = $carrinho;
     header("Location:controlerCarrinho.php?opcao=3");
@@ -40,7 +41,7 @@ if ($opcao == 2) {
 if ($opcao == 3) {
     session_start();
 
-    if (!isset($_SESSION_['carrinho']) || sizeof($_SESSION['carrinho']) == 0) {
+    if (!isset($_SESSION['carrinho']) || sizeof($_SESSION['carrinho']) == 0) {
         header("Location:../exibirCarrinho.php?status=1");
     } else {
         header("Location:../exibirCarrinho.php");

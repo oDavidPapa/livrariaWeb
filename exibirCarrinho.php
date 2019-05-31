@@ -44,13 +44,13 @@ require_once './classes/Publicacao.php';
                 }
                 echo" <br>
             <tr align='right'>
-                <td colspan='6'><font color='red'><h3>Valor Total: <?php echo $valorTotal ?></td></h3>
+                <td colspan='6'><font color='red'><h3>Valor Total: $valorTotal </td></h3>
             </tr>";
 
                 echo "</table>";
                 
-               
-            echo "<a href='#'><img src='imagens/finalizarCompra.png'</a> <a href='controles/controlerPublicacao.php?opcao=2'><img src='imagens/botao_continuar_comprando.png'</a>";
+               echo "<br>";
+            echo "<a href='finalizarCompra.php?total=".$valorTotal."'><img src='imagens/finalizarCompra.png'</a> <a href='controles/controlerPublicacao.php?opcao=2'><img src='imagens/botao_continuar_comprando.png'</a>";
             }
             ?>
 
