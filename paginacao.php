@@ -1,0 +1,1 @@
+<p><a href="controles/controlerAutor.php?opcao=7"> PAGINACAO AUTORES </a> </p>

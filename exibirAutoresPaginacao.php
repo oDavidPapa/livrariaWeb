@@ -1,7 +1,5 @@
 <?php
 
-//header('Content-Type: text/html; charset=ISO-8859-1');
-
 function formatarData($data) {
     return date('d/m/Y', $data);
 }
@@ -10,7 +8,7 @@ session_start();
 //$autores = array();
 
 $autores = $_SESSION['autores'];
-
+$numPaginas = $_REQUEST['paginas'];
 //var_dump($autores);
 include_once 'cabecalho.php';
 ?>
@@ -42,9 +40,9 @@ include_once 'cabecalho.php';
             <td><?php echo $email ?></td>
             <td><?php echo $dataNascimento ?></td>
             <td><?php
-                echo "<a href='controles/controlerAutor.php?opcao=3&id=" . $id . "'> Alterar </a>&nbsp;";
-                echo "<a href='controles/controlerAutor.php?opcao=4&id=" . $id . "'> Excluir </a>";
-                ?></td>
+    echo "<a href='controles/controlerAutor.php?opcao=3&id=" . $id . "'> Alterar </a>&nbsp;";
+    echo "<a href='controles/controlerAutor.php?opcao=4&id=" . $id . "'> Excluir </a>";
+        ?></td>
         </tr>
         <?php
     }
@@ -52,7 +50,16 @@ include_once 'cabecalho.php';
 
 </table>
 
+<div>
+    <?php
+    for ($i = 1; $i <= $numPaginas; $i++) {
+        ?>
+        <a href="controles/controlerAutor.php?opcao=6&pagina=<?php echo $i ?>"><?php echo $i ?></a>
 
+        <?php
+    }
+    ?>
+</div>
 </center>
 
 </body>

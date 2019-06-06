@@ -47,4 +47,11 @@ if ($opcao == 3) {
         header("Location:../exibirCarrinho.php");
     }
 }
+if ($opcao == 4) {
+    session_start();
+    $total = $_REQUEST['total'];
+    $_SESSION['total'] = $total;
+    
+    header("Location:../formLoginCliente.php");
+}
 ?>

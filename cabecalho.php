@@ -36,7 +36,7 @@
                         </ul>
                     </li>
                     <li><a href="#">Contato</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="./formLoginCliente.php">Login</a></li>
                 </ul>
             </nav>
         </div>

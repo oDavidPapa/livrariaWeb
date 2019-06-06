@@ -65,8 +65,8 @@ if ($opcao == 1) {
     $email = $_REQUEST['email'];
     $senha = $_REQUEST['senha'];
     $rg = $_REQUEST['rg'];
-    
-    
+
+
 
     $cliente = new Cliente($cpf, $nome, $logradouro, $cidade, $estado, $cep, $dataNascimento, $email, $senha, $rg);
     $clienteDAO = new ClienteDAO();
@@ -74,5 +74,18 @@ if ($opcao == 1) {
 
 
     header("Location:../controles/controlerCliente.php?opcao=2");
+} if ($opcao == 6) {
+    $login = $_REQUEST['email'];
+    $senha = $_REQUEST['senha'];
+    $clienteDAO = new ClienteDAO();
+    $cliente = $clienteDAO->autenticar($login, $senha);
+
+    if ($cliente != NULL) {
+        session_start();
+        $_SESSION['clienteLogado'] = $cliente;
+        header("Location:../dadosCompra.php");
+    }
+
+  
 }
 ?>

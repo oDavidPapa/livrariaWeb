@@ -86,8 +86,22 @@ class ClienteDAO {
         $sql->bindValue(':email', $cliente->getEmail());
         $sql->bindValue(':senha', $cliente->getSenha());
         $sql->bindValue(':rg', $cliente->getRg());
-       // var_dump($sql);
+        // var_dump($sql);
         $sql->execute();
+    }
+
+    public function autenticar($login, $senha) {
+        $loginTratado = strtolower($login);
+        $sql = $this->con->prepare("SELECT * FROM clientes WHERE email = :login AND senha = :senha");
+        $sql->bindValue(':login', $loginTratado);
+        $sql->bindValue(':senha', $senha);
+
+        $sql->execute();
+        if ($sql->rowCount() > 0) {
+            return $sql->fetch(PDO::FETCH_OBJ);
+        } else {
+            return NULL;
+        }
     }
 
 }

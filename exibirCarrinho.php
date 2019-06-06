@@ -50,7 +50,7 @@ require_once './classes/Publicacao.php';
                 echo "</table>";
                 
                echo "<br>";
-            echo "<a href='finalizarCompra.php?total=".$valorTotal."'><img src='imagens/finalizarCompra.png'</a> <a href='controles/controlerPublicacao.php?opcao=2'><img src='imagens/botao_continuar_comprando.png'</a>";
+            echo "<a href='controles/controlerCarrinho.php?opcao=4&total=".$valorTotal."'><img src='imagens/finalizarCompra.png'</a> <a href='controles/controlerPublicacao.php?opcao=2'><img src='imagens/botao_continuar_comprando.png'</a>";
             }
             ?>
 

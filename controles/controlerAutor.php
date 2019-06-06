@@ -64,5 +64,18 @@ if ($opcao == 1) {
     $autorDAO->atualizarAutor($autor);
 
     header("Location:../controles/controlerAutor.php?opcao=2");
+} if ($opcao == 6) {
+    $pagina = $_REQUEST['pagina'];
+    $autorDAO = new AutorDAO();
+    $lista = $autorDAO->getAutoresPaginacao($pagina);
+    $numeroPaginas = $autorDAO->getPagina();
+
+    session_start();
+
+    $_SESSION['autores'] = $lista;
+    header("Location:../exibirAutoresPaginacao.php?paginas=".$numeroPaginas);
+    
+} if ($opcao == 7) {
+    header("Location:../controles/controlerAutor.php?opcao=6&pagina=2");
 }
 ?>
