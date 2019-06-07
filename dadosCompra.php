@@ -1,5 +1,4 @@
 <?php
-
 require_once './classes/Publicacao.php';
 
 session_start();
@@ -13,7 +12,11 @@ echo "<br>VALOR COMPRA: $valorTotal <br>";
 
 echo "<br>LIVROS COMPRADOS: <br>";
 foreach ($carrinho as $publicacao) {
-    echo "<br>Livros: ".$publicacao->getTitulo();
+    echo "<br>Livros: " . $publicacao->getTitulo();
 }
 ?>
+<br> <br>
+<form action="dadosPagamento.php">
+    <input type="submit" value="PROXIMO>>">
+</form>
 

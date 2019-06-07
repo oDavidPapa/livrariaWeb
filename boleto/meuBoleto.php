@@ -5,16 +5,21 @@ require 'autoloader.php';
 use OpenBoleto\Banco\BancoDoBrasil;
 use OpenBoleto\Agente;
 
-$nome = $_REQUEST['nome'];
-$cpf = $_REQUEST['cpf'];
-$endereco = $_REQUEST['endereco'];
-$cidade = $_REQUEST['cidade'];
-$estado = $_REQUEST['estado'];
-$cep = $_REQUEST['cep'];
-$valorTotal =(float) $_REQUEST['valorTotal'];
+session_start();
+$cliente = $_SESSION['clienteLogado'];
+$valorTotal = $_SESSION['total'];
+$carrinho = $_SESSION['carrinho'];
+
+## DADOS PARA O BOLETO
+$nome = $cliente->nome;
+$cpf = $cliente->cpf;
+$endereco = $cliente->logradouro;
+$cep = $cliente->cep;
+$cidade = $cliente->cidade;
+$estado = $cliente->estado;
 
 //$sacado = new Agente('Fernando Maia', '023.434.234-34', 'ABC 302 Bloco N', '72000-000', 'Brasília', 'DF');
-$sacado = new Agente($nome,$cpf, $endereco, $cep, $estado, $estado);
+$sacado = new Agente($nome, $cpf, $endereco, $cep, $cidade, $estado);
 $cedente = new Agente('Empresa Da UFES', '02.123.123/0001-11', 'CLS 403 Lj 23', '29500-000', 'Alegre', 'ES');
 
 $boleto = new BancoDoBrasil(array(
